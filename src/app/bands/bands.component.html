@@ -1,4 +1,11 @@
 <h2> {{ band.name | uppercase }} Details: </h2>
+
 <div><span> id: </span> {{ band.id }} </div>
-<div><span> name: </span> {{ band.name }} </div>
+
+<div>
+  <label> name:
+    <input [(ngModel)]="band.name" placeholder="name">
+  </label>
+</div>
+
 <div><span> genre: </span> {{ band.genre }}</div>
