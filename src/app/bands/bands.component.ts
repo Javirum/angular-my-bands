@@ -11,7 +11,8 @@ export class BandsComponent implements OnInit {
 
   band: Band = {
     id: 1,
-    name: 'Java and the Scripts'
+    name: 'Java and the Scripts',
+    genre: 'Angular Rock & Roll'
   };
 
   constructor() {
