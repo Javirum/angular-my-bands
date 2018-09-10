@@ -1,3 +1,10 @@
+<h2>My Heroes</h2>
+<ul class="heroes">
+  <li *ngFor="let band of bands">
+    <span class="badge">{{ band.id }}</span> {{ band.name }} <span> Genre: </span> {{ band.genre }}
+  </li>
+</ul>
+
 <h2> {{ band.name | uppercase }} Details: </h2>
 
 <div><span> id: </span> {{ band.id }} </div>
