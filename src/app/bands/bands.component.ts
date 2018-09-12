@@ -12,17 +12,16 @@ export class BandsComponent implements OnInit {
 
   bands = BANDS;
 
-  band: Band = {
-    id: 1,
-    name: 'Java and the Scripts',
-    genre: 'Angular Rock & Roll',
-
-  };
+  selectedBand: Band;
 
   constructor() {
   }
 
   ngOnInit() {
+  }
+
+  onSelect(band: Band): void {
+    this.selectedBand = band;
   }
 
 }
