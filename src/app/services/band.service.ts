@@ -11,6 +11,8 @@ import { MessageService } from '../services/message.service';
 export class BandService {
 
   getBands(): Observable<Band[]> {
+    // TODO: send the message _after_ fetching the bands
+    this.messageService.add('BandService: fetched heroes');
     return of(BANDS);
   }
 
