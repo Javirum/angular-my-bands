@@ -5,12 +5,14 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { BandsComponent } from './bands/bands.component';
 import { BandDetailComponent } from './band-detail/band-detail.component';
+import { MessagesComponent } from './messages/messages.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BandsComponent,
-    BandDetailComponent
+    BandDetailComponent,
+    MessagesComponent
   ],
   imports: [
     BrowserModule,
