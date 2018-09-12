@@ -1,0 +1,14 @@
+<div *ngIf="selectedBand">
+  <h2> {{ selectedBand.name | uppercase }} Details: </h2>
+
+  <div><span> id: </span> {{ selectedBand.id }} </div>
+
+  <div>
+    <label> name:
+      <input [(ngModel)]="selectedBand.name" placeholder="name">
+    </label>
+  </div>
+
+  <div><span> genre: </span> {{ selectedBand.genre }}</div>
+
+</div>
