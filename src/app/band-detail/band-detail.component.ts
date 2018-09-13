@@ -30,4 +30,8 @@ export class BandDetailComponent implements OnInit {
       .subscribe(band => this.band = band);
   }
 
+  goBack(): void {
+    this.location.back();
+  }
+
 }
