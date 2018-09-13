@@ -2,6 +2,8 @@
   My Bands</h2>
 <ul class="bands">
   <li *ngFor="let band of bands" [class.selected]="band === selectedBand" (click)="onSelect(band)">
-    <span class="badge">{{ band.id }}</span> {{ band.name }} <span class="genre"> Genre: </span> {{ band.genre }}
+    <a routerLink="/detail/{{band.id}}">
+      <span class="badge">{{ band.id }}</span> {{ band.name }} <span class="genre"> Genre: </span> {{ band.genre }}
+    </a>
   </li>
 </ul>
