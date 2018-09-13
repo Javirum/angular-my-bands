@@ -1,5 +1,9 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Band } from '../band';
+import { ActivatedRoute } from '@angular/router';
+import { Location } from '@angular/common';
+
+import { BandService } from '../services/band.service';
 
 
 @Component({
@@ -10,9 +14,20 @@ import { Band } from '../band';
 export class BandDetailComponent implements OnInit {
   @Input() band: Band;
 
-  constructor() { }
+  constructor(
+    private route: ActivatedRoute,
+    private bandService: BandService,
+    private location: Location
+  ) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
+    this.getBand();
+  }
+
+  getBand(): void {
+    const id = +this.route.snapshot.paramMap.get('id');
+    this.bandService.getBand(id)
+      .subscribe(band => this.band = band);
   }
 
 }

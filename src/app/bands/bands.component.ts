@@ -24,7 +24,7 @@ export class BandsComponent implements OnInit {
 
   getBands(): void {
     this.bandService.getBands()
-      .subscribe(heroes => this.bands = heroes);
+      .subscribe(bands => this.bands = bands);
   }
 
   onSelect(band: Band): void {

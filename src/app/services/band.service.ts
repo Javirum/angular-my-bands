@@ -10,11 +10,18 @@ import { MessageService } from '../services/message.service';
 })
 export class BandService {
 
+  constructor(private messageService: MessageService) { }
+
   getBands(): Observable<Band[]> {
     // TODO: send the message _after_ fetching the bands
-    this.messageService.add('BandService: fetched heroes');
+    this.messageService.add('BandService: fetched bands');
     return of(BANDS);
   }
 
-  constructor(private messageService: MessageService) { }
+  getBand(id: number): Observable<Band> {
+    // TODO: send the message _after_ fetching the hero
+    this.messageService.add(`BandService: fetched band id=${id}`);
+    return of(BANDS.find(band => band.id === id));
+  }
 }
+
